@@ -12,13 +12,24 @@
     </main>
         <header>Guessing Game</header>
             <h3>Instructions to Play</h3>
-            <p>Type a number in the box and hit the button. You have four tries to guess correctly or it's game over.</p>
+            <p>Type a guess between 1 and 20 in the box and hit the button. You have four tries to guess correctly or it's game over.</p>
 
-            <input id='enter-guess'type="number" min/max>
+            <input id='enter-guess'type="number" min='1' max='20'>
 
             <button id="game-button">Guess</button>
+
             <div id="triesLeft">
                 You have <span id="guess-count"></span> guesses left.
+            </div>
+            <div id="win-result">
+
+                <p>Congratulations! You guessed the number!</p>
+
+            </div>
+            <div id="lose-result">
+
+                <p>Sorry, You ran out of guesses. Better luck next time.</p>
+
             </div>
     <main>
 
