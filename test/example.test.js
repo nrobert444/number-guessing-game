@@ -1,21 +1,27 @@
-import { compareNumbers } from "../compare";
+import { compareNumbers } from "../compare.js";
 
 // IMPORT MODULES under test here:
 // import example from '../src/example.js';
 
 const test = QUnit.test;
 
-test('test compareNumbers for non-matching result', function(assert) {
-    //Arrange
-    // Set up your parameters and expectations
+test('test compareNumbers for non-matching too-low result', function(assert) {
     const userGuess = 6;
-    const expected = 9;
-    const results = compareNumbers(userGuess, expected);
-    assert.equal(results, false);
-    //Act 
-    // Call the function you're testing and set the result to a const
+    const expected = 1;
+    const results = compareNumbers(userGuess, 9);
+    assert.equal(results, expected);
 
-    //Assert
-    // Make assertions about what is expected valid result
-    //assert.equal(results, true);
 });
+test('test compareNumbers for matching result', function(assert) {
+    const userGuess = 6;
+    const expected = 0;
+    const results = compareNumbers(userGuess, 6);
+    assert.equal(results, expected);
+});
+
+test('test compareNumbers for non-matching too high result', function(assert) {
+    const userGuess = 6;
+    const expected = -1;
+    const results = compareNumbers(userGuess, 4);
+    assert.equal(results, expected);
+}); 
