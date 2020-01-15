@@ -20,8 +20,9 @@ let guessesLeft = 4;
 //update the guesses left and output to the span.
 guessCountSpan.textContent = guessesLeft;
 
+
 //function that compares input and decrements wrong guesses from guess count or displays win/lose messages.
-function determineResult (input, remainingGuesses) {
+function determineResult(input) {
   const result = compareNumbers(input, winningNumber);
   //message to be updated if guess is too high or low.
   showMessage('');
@@ -55,22 +56,28 @@ function determineResult (input, remainingGuesses) {
     }
   }
 }
-// function that checks if the answer is a number and if it's within an acceptable range.
-function checkAnswer (answer) {
+
+
+// function that checks if the answer is a number and if it's within an acceptable range. 
+function checkAnswer(answer) {
   if (typeof(answer) !== 'number') {
     alert('Please input a number')
   } else if (answer > 20 || answer < 1) {
     alert('Please input a number between 1 and 20')
   } else {
-    determineResult(answer, guessesLeft)
+    determineResult(answer)
   }
 }
+
+
 //function that shows message if guess is too high/low. 
-function showMessage (msg) {
+function showMessage(msg) {
   guessMessage.textContent = msg
 }
+
+
 //function that resets the display, guessCount, etc.
-function resetGame () {
+function resetGame() {
   displayWin.style.visibility = 'hidden';
   displayLose.style.visibility = 'hidden';
   reset.style.display = 'none';
@@ -79,8 +86,10 @@ function resetGame () {
   guessCountSpan.textContent = guessesLeft;
   disableUserInput(false);
 }
+
+
 //function that disables users ability to input.
-function disableUserInput (state) {
+function disableUserInput(state) {
   if (state === false) {
     button.removeAttribute('disabled');
     guessInput.removeAttribute('disabled');
@@ -89,16 +98,19 @@ function disableUserInput (state) {
     guessInput.setAttribute('disabled', '');
   }
 }
+
+
 //event listener for reset button click.
 reset.addEventListener('click', event => {
   resetGame();
 })
+
+
 //event listener for submitting user input and checking if input is valid.
 button.addEventListener('click', event => {
     let currentGuess = Number(document.getElementById('enter-guess').value);
     checkAnswer(currentGuess);
 })
-
 
 
 

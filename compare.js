@@ -7,3 +7,6 @@ export function compareNumbers (guess, correctNumber) {
       return 1;
     }
   }
+
+
+ 
