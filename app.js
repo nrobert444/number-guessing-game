@@ -1,19 +1,20 @@
+import { compareNumbers } from './compare.js';
+
 const button = document.getElementById('game-button');
+const guess = document.getElementById('enter-guess').value;
+const newGuess = Number(guess);
 const guessCountSpan = document.getElementById('guess-count')
 const displayWin = document.getElementById('win-result');
 const displayLose = document.getElementById('lose-result');
-const correctNumber = makeRandom();
-const guess = document.getElementById('enter-guess');
+const correctNumber = 17;
 let guessesLeft = 4; 
 
 
 button.addEventListener('click', () => {
-    guessesLeft--;
-    if (guess > correctNumber) {
-        return "You guessed too high";
-    } else if (guess < correctNumber) {
-        return "You guessed too low";
-    }
+    
+    
+
+    
 
 
 
@@ -22,16 +23,4 @@ button.addEventListener('click', () => {
 
 
 
-
-
-function compareNumbers(guess, correctNumber) {
-    if (guess === correctNumber) return displayWin;
-
-guessCount--;
-
-}
-
-function makeRandom() {
-    return Math.floor(Math.random()) * 10;
-}
 

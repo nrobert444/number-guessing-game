@@ -1,8 +1,8 @@
 #win-result {
+    visibility: hidden;
 }
 #lose-result {
+    visibility: hidden;
     
 }
-#triesLeft {
-    padding-top: 50px;
-}
+
