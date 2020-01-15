@@ -1,12 +1,9 @@
-export function compareNumbers(newGuess, correctNumber) {
-    if (newGuess === correctNumber) {
-        return displayWin;
-    } else if (newGuess > correctNumber) {
-        return "You guessed too high";
-        guessesLeft--;
-    } else {
-        (newGuess < correctNumber) 
-            return "You guessed too low";
-            guessesLeft--;
+export function compareNumbers (guess, correctNumber) {
+    if (guess === correctNumber) {
+      return 0;
+    } else if (guess > correctNumber) {
+      return -1;
+    } else if (guess < correctNumber) {
+      return 1;
     }
-};
+  }
