@@ -2,16 +2,51 @@
     box-sizing: border-box;
 }
 body {
-    background-color:coral;
+    background:
+    linear-gradient(135deg, #708090 21px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px),
+    linear-gradient(225deg, #708090 21px, #d9ecff 22px, #d9ecff 24px, transparent 24px, transparent 67px, #d9ecff 67px, #d9ecff 69px, transparent 69px)0 64px;
+    background-color:#708090;
+    background-size: 64px 128px;
 }
-
+#make-space {
+    padding: 20px;
+    margin-top: 15px;
+    border: solid blue 5px;
+    background-color: white;
+    width: 25%;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Arial;
+}
+#instruct-text {
+    font-size: 20px;
+}
+#head-block {
+    background-color: steelblue;
+    border-radius: 15em;
+}
 #win-result {
     visibility: hidden;
+    border: dotted 5px silver;
+    background-color: darkcyan;
     font-size: 40px;
     color: gold;
+    margin-top: 15px;
+}
+#guess-message {
+    visibility: hidden;
+    font-family: Arial;
+    font-weight: 800;
+    font-size: 18px;
+    background-color: tan;
+    border: solid 2px beige;
+    padding: 5px;
 }
 #lose-result {
     visibility: hidden;
+    border: dotted 5px seagreen;
+    background-color: yellow;
+    margin-bottom: 15px;
     font-size: 40px;
     color: red;
 }
@@ -34,10 +69,10 @@ body {
 
 img {
     border: solid 5px lightblue;
-    width: 80%;
+    width: 70%;
 }
 header {
-    font-size: 30px;
+    font-size: 50px;
     font-weight: bold;
     text-align: center;
     font-family: Arial;

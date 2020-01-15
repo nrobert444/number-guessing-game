@@ -35,10 +35,12 @@ function determineResult(input) {
     if (result === 0) {
       disableUserInput(true);
       displayWin.style.visibility = 'visible';
+      guessMessage.style.visibility = 'hidden';
       reset.style.display = 'block';     
     } else {
       disableUserInput(true);
       displayLose.style.visibility = 'visible';
+      guessMessage.style.visibility = 'hidden';
       reset.style.display = 'block';
     }
   } else {
@@ -72,6 +74,7 @@ function checkAnswer(answer) {
 
 //function that shows message if guess is too high/low. 
 function showMessage(msg) {
+  guessMessage.style.visibility = 'visible';
   guessMessage.textContent = msg
 }
 

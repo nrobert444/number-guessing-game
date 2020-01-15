@@ -10,29 +10,29 @@
 </head>
 <body>
     </main>
-        <header>Guessing Game</header>
-            <h3>Instructions to Play</h3>
-            <p>Type a guess between 1 and 20 in the box and hit the button. You have four tries to guess correctly or it's game over.</p>
-            <img src="https://ecdn.teacherspayteachers.com/thumbitem/ESL-Categories-Guessing-Game-Activity-Great-as-Time-Filler--4549448-1568778172/original-4549448-1.jpg">
-            <div>
-            <input id="enter-guess" class="disabled" type="number" min="1" max="20">
-            <button id="game-button" class="disabled">Guess</button>
-              <span id="guess-message"></span>
-            </div>
-            <div>
-                <span id="guess-count"></span> Guesses Left
-            </div>
-            <div id="win-result">
+        <div id="head-block">
+            <header>Guessing Game</header>
+        </div>
+        <h2>Instructions to Play</h2>
+        <p id='instruct-text'><strong>Type a guess between 1 and 20 in the box and hit the button. You have four tries to guess correctly or it's game over.</strong></p>
+        <img src="https://cdn.lynda.com/course/477451/477451-636198978267245657-16x9.jpg">
+        <div>
+        <input id="enter-guess" class="disabled" type="number" min="1" max="20">
+        <button id="game-button" class="disabled">Guess</button>
+            <span id="guess-message"></span>
+        </div>
+        <div id='make-space'>
+            <span id="guess-count"></span> Guesses Left
+        </div>
+        <div id="win-result">
+            <p>Congratulations! You guessed the number!</p>
 
-                <p>Congratulations! You guessed the number!</p>
+        </div>
+        <div id="lose-result">
+            <p>Sorry, You ran out of guesses. Better luck next time.</p>
 
-            </div>
-            <div id="lose-result">
-
-                <p>Sorry, You ran out of guesses. Better luck next time.</p>
-
-            </div>
-            <button id="reset" style="display: none">Reset</button>
+        </div>
+        <button id="reset" style="display: none">Reset</button>
     <main>
 
     <script type="module" src="app.js"></script>
