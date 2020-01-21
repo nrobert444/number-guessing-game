@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    </main>
+        <div id="head-block">
+            <header>Guessing Game</header>
+        </div>
+        <h2>Instructions to Play</h2>
+        <p id='instruct-text'><strong>Type a guess between 1 and 20 in the box and hit the button. You have four tries to guess correctly or it's game over.</strong></p>
+        <img src="https://cdn.lynda.com/course/477451/477451-636198978267245657-16x9.jpg">
+        <div>
+        <input id="enter-guess" class="disabled" type="number" min="1" max="20">
+        <button id="game-button" class="disabled">Guess</button>
+            <span id="guess-message"></span>
+        </div>
+        <div id='make-space'>
+            <span id="guess-count"></span> Guesses Left
+        </div>
+        <div id="win-result">
+            <p>Congratulations! You guessed the number!</p>
+
+        </div>
+        <div id="lose-result">
+            <p>Sorry, You ran out of guesses. Better luck next time.</p>
+
+        </div>
+        <button id="reset" style="display: none">Reset</button>
+    <main>
+
+    <script type="module" src="app.js"></script>
+</body>
+
+</html>
